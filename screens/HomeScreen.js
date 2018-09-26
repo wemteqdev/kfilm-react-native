@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-} from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View, Dimensions } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import axios from 'axios';
 import SliderEntry from '../components/SliderEntry';
@@ -61,7 +54,6 @@ export class HomeCarousel extends Component {
   }
 }
 
-
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -70,12 +62,8 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.getStartedContainer}>
-            <Text style={styles.getStartedText}>
-              KORFILM
-            </Text>
-
+        <ScrollView>
+          <View>
             <HomeCarousel />
           </View>
         </ScrollView>
@@ -88,18 +76,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  contentContainer: {
-    paddingTop: 30,
-  },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
   }
 });
