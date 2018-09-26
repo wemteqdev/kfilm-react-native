@@ -13,10 +13,6 @@ export class HomeCarousel extends Component {
     }
   }
 
-  _onLayoutDidChange = (e) => {
-    const layout = e.nativeEvent.layout;
-  }
-
   componentDidMount(){
     axios.get('https://korfilm.co/api/slides')
       .then(response => { 
@@ -24,7 +20,6 @@ export class HomeCarousel extends Component {
           return { title: item.title, subtitle: item.description, illustration: item.image_url };
         }); 
 
-        console.log(slides);
         this.setState({ slides: slides });
       })
       .catch(() => {});
@@ -39,7 +34,6 @@ export class HomeCarousel extends Component {
         return <Text></Text>;
 
       return (
-        <View style={{ flex: 1 }} onLayout={this._onLayoutDidChange}>
           <Carousel
             ref={(c) => { this._carousel = c; }}
             data={this.state.slides}
@@ -49,7 +43,6 @@ export class HomeCarousel extends Component {
             layout={'default'}
             windowSize={1}
           />
-        </View>
       );
   }
 }
