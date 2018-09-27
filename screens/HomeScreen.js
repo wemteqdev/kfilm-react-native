@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View, Dimensions } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View, Dimensions, Button } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import axios from 'axios';
 import SliderEntry from '../components/SliderEntry';
@@ -58,7 +58,20 @@ export default class HomeScreen extends React.Component {
         <ScrollView>
           <View>
             <HomeCarousel />
-          </View>
+            <Button
+              onPress={() => this.props.navigation.navigate('login')}
+              title="Login"
+              color="#841584"
+              accessibilityLabel="Login"
+            />
+
+            <Button
+              onPress={() => this.props.navigation.navigate('signup')}
+              title="Sign Up"
+              color="#841584"
+              accessibilityLabel="Sign Up"
+            />
+          </View>          
         </ScrollView>
       </View>
     );
