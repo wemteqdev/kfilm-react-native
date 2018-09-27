@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "kfilm-react-native",
-    "description": "A very interesting project.",
+    "description": "films, tv-series, animations of korfilm",
     "slug": "kfilm-react-native",
     "privacy": "public",
     "sdkVersion": "30.0.0",

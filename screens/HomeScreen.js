@@ -4,6 +4,7 @@ import Carousel from 'react-native-snap-carousel';
 import axios from 'axios';
 import SliderEntry from '../components/SliderEntry';
 import { sliderWidth, itemWidth } from '../components/SliderEntry.style';
+import { Actions } from 'react-native-router-flux';
 
 export class HomeCarousel extends Component {
   constructor() {
