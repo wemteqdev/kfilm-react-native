@@ -34,7 +34,7 @@ export default class LoginScreen extends React.Component {
               onPress={ this.Login }
               title="Login"
               color="#841584"
-              accessibilityLabel="Sign Up"
+              accessibilityLabel="Login"
             />
 
         <Button
