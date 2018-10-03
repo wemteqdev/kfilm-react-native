@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, View, TextInput } from 'react-native';
+import  APP from '../constants/App';
 
 export default class SignUpScreen extends React.Component {
   static navigationOptions = {

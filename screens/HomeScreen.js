@@ -4,7 +4,7 @@ import Carousel from 'react-native-snap-carousel';
 import axios from 'axios';
 import SliderEntry from '../components/SliderEntry';
 import { sliderWidth, itemWidth } from '../components/SliderEntry.style';
-
+import APP from '../constants/App';
 export class HomeCarousel extends Component {
   constructor() {
     super();
@@ -14,7 +14,8 @@ export class HomeCarousel extends Component {
   }
 
   componentDidMount(){
-    axios.get('https://korfilm.co/api/slides')
+    console.log(`${ APP.API_BASE_URL }/slides`);
+    axios.get(`${ APP.API_BASE_URL }/slides`)
       .then(response => { 
         let slides = response.data.data.map((item)=>{
           return { title: item.title, subtitle: item.description, illustration: item.image_url };

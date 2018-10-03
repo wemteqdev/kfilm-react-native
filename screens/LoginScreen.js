@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, View, TextInput } from 'react-native';
-
+import axios from 'axios';
+import APP from '../constants/App';
 export default class LoginScreen extends React.Component {
   static navigationOptions = {
     title: 'Login',
@@ -12,7 +13,11 @@ export default class LoginScreen extends React.Component {
   }
 
   Login() {
-    console.log('login');
+    axios.get(`${ APP.API_BASE_URL }/user/login?email=${this.state.email}&password=${this.state.password}`)
+      .then(response => {
+      
+      })
+      .catch(() => {});
   }
 
   render() {
