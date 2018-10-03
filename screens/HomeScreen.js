@@ -14,7 +14,6 @@ export class HomeCarousel extends Component {
   }
 
   componentDidMount(){
-    console.log(`${ APP.API_BASE_URL }/slides`);
     axios.get(`${ APP.API_BASE_URL }/slides`)
       .then(response => { 
         let slides = response.data.data.map((item)=>{
