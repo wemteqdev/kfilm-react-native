@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, ScrollView, StyleSheet, Text, View, Dimensions, Button } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Button } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import axios from 'axios';
 import SliderEntry from '../components/SliderEntry';

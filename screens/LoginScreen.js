@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { View, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import axios from 'axios';
 import APP from '../constants/App';
 export default class LoginScreen extends React.Component {
